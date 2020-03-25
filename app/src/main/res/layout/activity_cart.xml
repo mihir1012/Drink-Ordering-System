@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartActivity"
+    android:id="@+id/MainCartLayout">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="4dp"
+        android:scrollbars="vertical"
+        android:background="@android:color/darker_gray"
+        android:id="@+id/recyclerCartView"
+        android:layout_marginBottom="100dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/recyclerCartView"
+        android:layout_marginTop="-100dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Amount :"
+            android:textSize="30sp"
+            android:textColor="@android:color/black"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/textViewAmt"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NAN"
+            android:textSize="30sp"
+            android:textColor="@android:color/black"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/textViewAmt"
+            android:layout_marginStart="30dp"
+            android:id="@+id/CartTotalView"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancle"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="50dp"
+            android:onClick="CancleOrder"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="250dp"
+            android:onClick="PlaceOrder"/>
+    </RelativeLayout>
+</RelativeLayout>
